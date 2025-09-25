@@ -1,0 +1,381 @@
+/* === Variables for Easy Theming === */
+:root {
+  --primary-color: #2980b9;
+  --primary-hover: #1f6391;
+  --accent-color: #4caf50;
+  --accent-hover: #43a047;
+  --danger-color: #e74c3c;
+  --danger-hover: #c0392b;
+  --bg-light: #f9f9f9;
+  --bg-dark: #2c3e50;
+  --text-color: #333;
+  --radius: 8px;
+  --shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+  --transition: 0.3s ease;
+}
+
+/* === Reset & Base === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg-light);
+  color: var(--text-color);
+}
+
+/* === Navbar === */
+.navbar {
+  background-color: var(--bg-dark);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 24px;
+  flex-wrap: wrap;
+}
+
+.nav-left a,
+.nav-right a {
+  color: white;
+  margin-right: 16px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.nav-left a:hover,
+.nav-right a:hover {
+  text-decoration: underline;
+}
+
+.nav-right button {
+  background-color: var(--danger-color);
+  color: white;
+  padding: 6px 14px;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.nav-right button:hover {
+  background-color: var(--danger-hover);
+}
+
+/* === Common Page Container === */
+.page {
+  max-width: 960px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* === Card Container (for Signup, etc.) === */
+.card {
+  background-color: white;
+  padding: 32px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  max-width: 480px;
+  margin: 40px auto;
+}
+
+/* === Login Page === */
+.login-box {
+  background-color: white;
+  padding: 2rem 2.5rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  max-width: 420px;
+  margin: 60px auto;
+}
+
+.login-title {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: var(--bg-dark);
+  font-size: 1.6rem;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-input {
+  padding: 10px 12px;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: var(--radius);
+  outline: none;
+  transition: border var(--transition);
+}
+
+.login-input:focus {
+  border-color: var(--accent-color);
+}
+
+.login-error {
+  color: var(--danger-color);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.login-button {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 10px 15px;
+  font-size: 1rem;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.login-button:hover {
+  background-color: var(--primary-hover);
+}
+
+.login-switch {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.95rem;
+}
+
+.signup-link {
+  color: #007bff;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.signup-link:hover {
+  color: #0056b3;
+}
+
+/* === Signup Page === */
+.signup-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.signup-input {
+  padding: 10px 12px;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: var(--radius);
+}
+
+.signup-button {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 10px 15px;
+  font-size: 1rem;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.signup-button:hover {
+  background-color: var(--primary-hover);
+}
+
+/* === Dashboard Page === */
+.dashboard {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.dashboard h1 {
+  margin-bottom: 1rem;
+}
+
+.dashboard p {
+  margin-bottom: 5px;
+}
+
+.dashboard button {
+  background-color: var(--danger-color);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: var(--radius);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.dashboard button:hover {
+  background-color: var(--danger-hover);
+}
+
+/* === About / Contact / Home === */
+.about,
+.contact,
+.home {
+  padding: 2rem 1rem;
+  max-width: 800px;
+  margin: auto;
+  background-color: white;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  margin-top: 2rem;
+}
+
+.about h2,
+.contact h2,
+.home h2 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.about p,
+.contact p,
+.home p {
+  line-height: 1.6;
+  font-size: 1rem;
+  color: #555;
+}
+
+/* === Responsive === */
+/* === Mobile-Friendly Enhancements === */
+@media (max-width: 768px) {
+  body {
+    font-size: 15px;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 16px;
+  }
+
+  .nav-left a,
+  .nav-right a {
+    margin: 8px 0;
+  }
+
+  .nav-right {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .nav-right button {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .page,
+  .card,
+  .login-box,
+  .about,
+  .contact,
+  .home,
+  .dashboard {
+    padding: 1rem;
+    margin: 20px auto;
+    width: 90%;
+  }
+
+  .login-title,
+  .dashboard h1,
+  .about h2,
+  .contact h2,
+  .home h2 {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+
+  .login-input,
+  .signup-input {
+    font-size: 0.95rem;
+    padding: 10px;
+  }
+
+  .login-button,
+  .signup-button,
+  .dashboard button {
+    font-size: 1rem;
+    padding: 10px;
+    width: 100%;
+  }
+
+  .toggle-password {
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.8rem;
+  }
+
+  .password-wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  .signup-link,
+  .login-switch {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+
+  .dashboard p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-title,
+  .dashboard h1,
+  .about h2,
+  .contact h2,
+  .home h2 {
+    font-size: 1.2rem;
+  }
+
+  .login-input,
+  .signup-input {
+    font-size: 0.9rem;
+    padding: 9px;
+  }
+
+  .login-button,
+  .signup-button,
+  .dashboard button {
+    font-size: 0.95rem;
+    padding: 9px;
+  }
+
+  .card,
+  .login-box {
+    padding: 1rem;
+  }
+
+  .about,
+  .contact,
+  .home {
+    padding: 1rem;
+  }
+}
+
+.password-wrapper {
+  position: relative;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 10px;
+  top: 7px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 0.85rem;
+  color: #007bff;
+}
