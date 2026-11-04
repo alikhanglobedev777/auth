@@ -4,3 +4,11 @@ frontend/node_modules/
 /dist
 /build
 config.bat
+
+# Exclude local and deployment secrets
+.env
+.env.*
+**/.env
+**/.env.*
+!.env.example
+!**/.env.example
